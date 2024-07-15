@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19. The main purpose of this repository is to fix version  conflicts between packages using `resolutions` in `package.json`. This approach ensures that the exact versions specified are used, particularly to solve issues with `package-lock.json`.
 
-This example uses the `@azure/storage-blob` package with angular 11. Example of how to fixed packages errors. The key is to install a compatible package version.
+This example uses the `@azure/storage-blob@12.10.0` package with angular 11. Example of how to fixed packages errors. The key is to install a compatible package version.
 
 ## Node and NPM Versions
 - Node.js: 16.19.0
