@@ -1,27 +1,63 @@
-# Angular11Node16
+# Angular 11 Project with NPM Resolutions
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19. Example of how to fixed packages errors. The key is to install a compatible package version.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19. The main purpose of this repository is to fix version  conflicts between packages using `resolutions` in `package.json`. This approach ensures that the exact versions specified are used, particularly to solve issues with `package-lock.json`.
 
-## Development server
+This example uses the `@azure/storage-blob` package with angular 11. Example of how to fixed packages errors. The key is to install a compatible package version.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Node and NPM Versions
+- Node.js: 16.19.0
+- NPM: 8.19.3
 
-## Code scaffolding
+## Angular CLI Version
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```plaintext
+Angular CLI: 11.2.19
+Node: 16.19.0
+OS: win32 x64
 
-## Build
+Angular: 11.2.14
+... animations, common, compiler, compiler-cli, core, forms
+... platform-browser, platform-browser-dynamic, router
+Ivy Workspace: Yes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1102.19
+@angular-devkit/build-angular   0.1102.19
+@angular-devkit/core            11.2.19
+@angular-devkit/schematics      11.2.19
+@angular/cli                    11.2.19
+@schematics/angular             11.2.19
+@schematics/update              0.1102.19
+rxjs                            6.6.7
+typescript                      4.1.6
+```
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Run the setup script
 
-## Running end-to-end tests
+```bash
+npm run setup
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+2. Then run npm install
 
-## Further help
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Resolving Package Version Conflicts
+
+Tis project encountered issues with specific versions of `@azure/core-util` and `@azure/logger`. The correct versions that work are:
+
+- `@azure/core-util: 1.7.0`
+- `@azure/logger: 1.0.4`
+
+By using the resolutions field in `package.json`, you can specify these exact versions and ensure they are used during installation.
+
+## Important Disclaimer
+
+This guide is provided to address specific version conflicts but is not a recommended long-term solution. The best practice is always to keep your packages updated to their latest versions to benefit from security patches and new features. Using this guide is at your own risk, and you should consider updating your packages regularly to maintain a secure and efficient codebase.
+
+While pinning package versions can quickly resolve conflicts and ensure compatibility, it should be seen as a temporary measure. Regular updates and maintenance of your dependencies are crucial to safeguard against vulnerabilities and to leverage improvements in performance and functionality.
