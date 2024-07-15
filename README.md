@@ -1,4 +1,4 @@
-# Angular 11 Project with NPM Resolutions
+# Angular 11 Project with NPM Resolutions Example
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19. The main purpose of this repository is to fix version  conflicts between packages using `resolutions` in `package.json`. This approach ensures that the exact versions specified are used, particularly to solve issues with `package-lock.json`.
 
@@ -47,6 +47,12 @@ npm run setup
 npm install
 ```
 
+3. Then ng serve
+
+```bash
+npm run start
+```
+
 ## Resolving Package Version Conflicts
 
 Tis project encountered issues with specific versions of `@azure/core-util` and `@azure/logger`. The correct versions that work are:
@@ -55,6 +61,18 @@ Tis project encountered issues with specific versions of `@azure/core-util` and 
 - `@azure/logger: 1.0.4`
 
 By using the resolutions field in `package.json`, you can specify these exact versions and ensure they are used during installation.
+
+## Version Compatibility
+
+Working Versions:
+
+- @azure/core-util: 1.7.0
+- @azure/logger: 1.0.4
+
+Non-Working Versions:
+
+- @azure/core-util: 1.8.0
+- @azure/logger: 1.1.0
 
 ## Important Disclaimer
 
