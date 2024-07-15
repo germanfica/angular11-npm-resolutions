@@ -1,6 +1,6 @@
 # Angular11Node16
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.19. Example of how to fixed packages errors. The key is to install a compatible package version.
 
 ## Development server
 
